@@ -1,20 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Document</title>
+    <title>Services</title>
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
- <!-- ── NAVIGATION ── -->
+  <!-- ── NAVIGATION ── -->
   <nav aria-label="Main navigation">
-  <a href="index.html" class="nav-logo">Clean<span>Co</span></a>
+   <a href="index.html" class="brand"><span class="logo">♻</span> GreenCycle</a>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Services</a></li>
-      <li><a href="data.html">Report</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="report.html">Report</a></li>
     </ul>
   </nav>
-    
+
+  </header>
+
+  <main>
+    <section class="container section">
+      <header class="page-head">
+        <h1>Our Services</h1>
+        <p>Comprehensive waste solutions for homes, businesses, and communities. Live counts come from your local reports (saved in your browser).</p>
+      </header>
+      <div class="cards" id="services-grid"></div>
+    </section>
+  </main>
+
+  <!--footer-->
+<footer class="site-footer">
+    <div class="container footer-grid">
+        <p>© <span id="year"></span> Clean Co. Cleaner streets, greener future.</p>
+    </div>
+</footer>
+
+  <script src="js/storage.js"></script>
+  <script src="js/services.js"></script>
 </body>
 </html>

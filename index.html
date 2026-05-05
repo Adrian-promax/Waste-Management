@@ -1,172 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GreenCycle — Smart Waste Management</title>
+  <meta name="description" content="Report waste issues, track pickups, and learn how to recycle better in your community." />
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-    <nav aria-label="Main">
-        <a href="index.html" class="nav-logo" aria-logo="Clean Co">Clean<span>Co</span></a>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="data.html">Projects</a></li>
-        </ul>
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="index.html" class="brand"><span class="logo">♻</span> GreenCycle</a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="reports.html">Reports</a></li>
+        <li><a href="report.html">Report Issue</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
     </nav>
-    <!-- ── HEADER: Hero section (semantic <header>) ── -->
-  <header class="page-header" role="banner">
-    <div class="hero-bg" aria-hidden="true"></div>
-    <div class="hero-grid" aria-hidden="true"></div>
- 
-    <p class="hero-tag">Waste Management Specialist</p>
- 
-    <h1 class="hero-title">
-      <span class="line-accent">RETHINK</span><br>
-      <span class="line-outline">WASTE.</span><br>
-      BUILD FUTURE.
-    </h1>
- 
-    <p class="hero-sub">
-      Turning environmental challenges into sustainable solutions.
-      Specialising in urban waste strategy, circular economy, and zero-waste consulting.
-    </p>
- 
-    <div class="hero-btns">
-      <a href="about.html" class="btn btn-primary">Explore My Work ↗</a>
-      <a href="contact.html" class="btn btn-outline">Get In Touch</a>
-    </div>
- 
-    <div class="hero-counter" aria-label="12 plus years experience">
-      <div class="num">12+</div>
-      <div class="label">Years Experience</div>
-    </div>
   </header>
 
-  <!-- ── MAIN CONTENT (semantic <main>) ── -->
   <main>
- 
-    <!-- Services Section (semantic <section>) -->
-    <section aria-labelledby="services-heading">
-      <p class="section-tag reveal">What I Do</p>
-      <h2 id="services-heading" class="section-title reveal">CORE<br>SERVICES</h2>
- 
-      <div class="services-grid">
-        <article class="service-card reveal">
-          <div class="service-icon" aria-hidden="true">🏙️</div>
-          <h3>Urban Waste Strategy</h3>
-          <p>Designing city-scale waste management frameworks that reduce landfill dependency and improve collection efficiency for municipalities.</p>
-        </article>
-        <article class="service-card reveal">
-          <div class="service-icon" aria-hidden="true">♻️</div>
-          <h3>Recycling Programs</h3>
-          <p>Building end-to-end recycling systems for corporations and communities — from material sorting to certified disposal partnerships.</p>
-        </article>
-        <article class="service-card reveal">
-          <div class="service-icon" aria-hidden="true">🌱</div>
-          <h3>Zero-Waste Consulting</h3>
-          <p>Guiding organisations toward zero-waste certification through audits, training, and measurable reduction roadmaps.</p>
-        </article>
-        <article class="service-card reveal">
-          <div class="service-icon" aria-hidden="true">🔄</div>
-          <h3>Circular Economy Design</h3>
-          <p>Redesigning supply chains and product lifecycles to eliminate waste at the source and recover maximum material value.</p>
-        </article>
-        <article class="service-card reveal">
-          <div class="service-icon" aria-hidden="true">📊</div>
-          <h3>Waste Audits & Reporting</h3>
-          <p>Comprehensive waste audits with ESG-aligned reporting for compliance, investor transparency, and continuous improvement.</p>
-        </article>
-        <article class="service-card reveal">
-          <div class="service-icon" aria-hidden="true">🌍</div>
-          <h3>Community Education</h3>
-          <p>Developing training programmes and public awareness campaigns that shift community behaviour toward sustainable practices.</p>
-        </article>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="tag">Community-driven</span>
+          <h1>Cleaner streets,<br/><span class="gradient-text">greener future.</span></h1>
+          <p class="lead">GreenCycle helps neighborhoods report waste issues, schedule pickups, and learn smarter ways to recycle.</p>
+          <div class="actions">
+            <a href="report.html" class="btn btn-primary">Report an Issue</a>
+            <a href="reports.html" class="btn btn-outline">View Reports</a>
+          </div>
+        </div>
+        <div class="stats">
+          <div class="stat-card"><div class="stat-value" id="stat-total">0</div><div class="stat-label">Total Reports</div></div>
+          <div class="stat-card"><div class="stat-value" id="stat-high">0</div><div class="stat-label">High Urgency</div></div>
+          <div class="stat-card"><div class="stat-value" id="stat-recycled">0</div><div class="stat-label">Recyclable</div></div>
+        </div>
       </div>
     </section>
- 
-    <!-- Stats Section -->
-    <div class="stats-row" role="region" aria-label="Key statistics">
-      <div class="stat-item reveal">
-        <div class="stat-num" data-target="85" data-suffix="%">0%</div>
-        <div class="stat-label">Average Waste Diversion Rate</div>
+
+    <section class="container section">
+      <h2 class="section-title">How GreenCycle works</h2>
+      <p class="section-sub">Three simple steps to a cleaner community.</p>
+      <div class="cards">
+        <article class="card"><div class="icon">📝</div><h3>1. Report</h3><p>Submit a waste issue with location, category, and urgency.</p></article>
+        <article class="card"><div class="icon">🚛</div><h3>2. Track</h3><p>View all community reports and monitor pickup status.</p></article>
+        <article class="card"><div class="icon">♻️</div><h3>3. Recycle</h3><p>Learn the right way to sort, reuse, and reduce waste.</p></article>
       </div>
-      <div class="stat-item reveal">
-        <div class="stat-num" data-target="200" data-suffix="+">0+</div>
-        <div class="stat-label">Projects Completed</div>
-      </div>
-      <div class="stat-item reveal">
-        <div class="stat-num" data-target="40" data-suffix="K+">0K+</div>
-        <div class="stat-label">Tonnes Waste Diverted</div>
-      </div>
-      <div class="stat-item reveal">
-        <div class="stat-num" data-target="30" data-suffix="+">0+</div>
-        <div class="stat-label">Clients Served</div>
-      </div>
-    </div>
- 
-    <!-- Live Projects Section — data pulled from localStorage by script.js -->
-    <section aria-labelledby="projects-heading">
-      <p class="section-tag reveal">Live Data</p>
-      <h2 id="projects-heading" class="section-title reveal">
-        RECENT<br><span style="color:var(--green)">PROJECTS</span>
-        <span id="liveCount" style="font-size:2rem; color:var(--text-muted); margin-left:1rem;"></span>
-      </h2>
-      <p class="reveal" style="color:var(--text-muted); margin-bottom:2rem; margin-top:-2rem;">
-        Projects below are added via the <a href="data.html" style="color:var(--green)">Projects page</a> and stored in your browser's localStorage.
-      </p>
-      <div id="liveProjects" class="live-entries"></div>
     </section>
- 
-    <!-- CTA Section -->
-    <section style="text-align:center;" aria-labelledby="cta-heading">
-      <p class="section-tag reveal" style="justify-content:center;">Ready to start?</p>
-      <h2 id="cta-heading" class="section-title reveal" style="margin-bottom:1.5rem;">
-        LET'S BUILD A<br><span style="color:var(--green)">CLEANER WORLD</span>
-      </h2>
-      <p class="reveal" style="color:var(--text-muted); max-width:480px; margin: 0 auto 2.5rem;">
-        Whether you're a city, corporation, or community — I'll help you create a waste strategy that works.
-      </p>
-      <a href="contact.html" class="btn btn-primary reveal">Start a Conversation ↗</a>
+
+    <section class="container section">
+      <div class="cta">
+        <h2>See an issue? Report it in 30 seconds.</h2>
+        <p>Every report helps us build a cleaner neighborhood.</p>
+        <a href="report.html" class="btn btn-light">Report Now →</a>
+      </div>
     </section>
- 
   </main>
-    <!-- ── TICKER BANNER ── -->
-  <div class="ticker-wrap" aria-hidden="true">
-    <div class="ticker-track">
-      <span class="ticker-item">RECYCLING<span>♻</span></span>
-      <span class="ticker-item">ZERO WASTE<span>★</span></span>
-      <span class="ticker-item">CIRCULAR ECONOMY<span>♻</span></span>
-      <span class="ticker-item">SUSTAINABILITY<span>★</span></span>
-      <span class="ticker-item">WASTE REDUCTION<span>♻</span></span>
-      <span class="ticker-item">GREEN SOLUTIONS<span>★</span></span>
-      <span class="ticker-item">COMPOSTING<span>♻</span></span>
-      <span class="ticker-item">CLEAN FUTURE<span>★</span></span>
-      <!-- Duplicate items for seamless infinite loop -->
-      <span class="ticker-item">RECYCLING<span>♻</span></span>
-      <span class="ticker-item">ZERO WASTE<span>★</span></span>
-      <span class="ticker-item">CIRCULAR ECONOMY<span>♻</span></span>
-      <span class="ticker-item">SUSTAINABILITY<span>★</span></span>
-      <span class="ticker-item">WASTE REDUCTION<span>♻</span></span>
-      <span class="ticker-item">GREEN SOLUTIONS<span>★</span></span>
-      <span class="ticker-item">COMPOSTING<span>♻</span></span>
-      <span class="ticker-item">CLEAN FUTURE<span>★</span></span>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <p>© <span id="year"></span> GreenCycle. Cleaner streets, greener future.</p>
+      <p>Built for the FSD-FT01 Final Project.</p>
     </div>
-  </div>
- 
-  <!-- ── FOOTER (semantic <footer>) ── -->
-  <footer role="contentinfo">
-    <a href="index.html" class="footer-logo">ECO<span>CORE</span></a>
-    <p>© 2025 EcoCore Waste Management. All rights reserved.</p>
-    <ul class="footer-links" aria-label="Footer navigation">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="data.html">Projects</a></li>
-    </ul>
   </footer>
- 
-  <!-- Shared JavaScript -->
-  <script src="script.js"></script>
+
+  <script src="js/storage.js"></script>
+  <script src="js/home.js"></script>
 </body>
 </html>

@@ -464,14 +464,11 @@ main { flex: 1; }
 /* Footer */
 .site-footer { 
     border-top: 1px solid var(--border); 
-    background: var(--secondary); 
     margin-top: 3rem; 
+    background-color: whitesmoke;
 }
 .footer-grid { 
-    display: flex; 
-    flex-direction: column; 
-    gap: 0.5rem; 
     padding: 2rem 1rem; 
     font-size: 0.9rem; 
-    color: var(--muted); 
+
 }

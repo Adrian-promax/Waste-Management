@@ -2,81 +2,116 @@
 <html lang="en">
 
 <head>
-  <title>Report</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Report Issue</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <header class="site-header"> 
-    <!-- ── NAVIGATION ── -->
+
+  <!-- ── NAVIGATION ── -->
+  <header class="site-header">
     <nav class="nav container">
-      <a href="index.html" class="brand"><span class="logo">♻</span>Clean Co</a>
+      <a href="index.html" class="brand">
+        <span class="logo">♻</span> Clean Co
+      </a>
+
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="services.html">Services</a></li>
-        <li><a href="report.html">Report</a></li>
+        <li><a href="report.html" class="active">Report</a></li>
+        <li><a href="reports.html">Reports</a></li>
       </ul>
     </nav>
   </header>
-  <section class="container section narrow">
-    <h1>Report a Waste Issue</h1>
 
-    <form id="report-form" class="form" novalidate>
-      <label>Title <span class="req"></span>
-        <input type="text" name="title" placeholder="the service you would like" minlength="3" />
-        <small class="error" data-for="title"></small>
-      </label>
-
-      <label>Location <span class="req"></span>
-        <input type="text" name="location" required />
-        <small class="error" data-for="location"></small>
-      </label>
-
-      <div class="row">
-        <label>Category
-          <select name="category">
-            <option>General</option>
-            <option>Plastic</option>
-            <option>Organic</option>
-            <option>E-Waste</option>
-            <option>Hazardous</option>
-          </select>
-        </label>
-        <label>Urgency
-          <select name="urgency">
-            <option>Low</option>
-            <option selected>Medium</option>
-            <option>High</option>
-          </select>
-        </label>
+  <!-- ── MAIN CONTENT ── -->
+  <main>
+    <section class="container section narrow">
+      <div class="page-head">
+        <h1>Report Waste Issue</h1>
+        <p>Help keep your community clean by reporting waste problems.</p>
       </div>
 
-      <label>Description
-        <textarea name="description" rows="4"></textarea>
-      </label>
+      <!-- FORM -->
+      <form id="report-form" class="form">
 
-      <div class="row">
-        <label>Your Name <span class="req"></span>
-          <input type="text" name="reporter" required />
-          <small class="error" data-for="reporter"></small>
+        <label>
+          Title <span class="req">*</span>
+          <input type="text" name="title" />
+          <div class="error" data-for="title"></div>
         </label>
-        <label>Email 📧 <span class="req"></span>
-          <input type="email" name="email" required />
-          <small class="error" data-for="email"></small>
+
+        <label>
+          Location <span class="req">*</span>
+          <input type="text" name="location" />
+          <div class="error" data-for="location"></div>
         </label>
-      </div>
 
-      <button type="submit" class="btn btn-primary">Submit Report</button>
-      <p id="success" class="success hidden">✅ Report submitted! Redirecting…</p>
-    </form>
+        <div class="row">
+          <label>
+            Category
+            <select name="category">
+              <option>General</option>
+              <option>Plastic</option>
+              <option>Organic</option>
+              <option>E-Waste</option>
+              <option>Hazardous</option>
+            </select>
+          </label>
 
-      <!--footer-->
-      <footer class="site-footer">
-        <div class="container footer-grid">
-          <p>© <span id="year"></span> Clean Co. Cleaner streets, greener future.</p>
+          <label>
+            Urgency
+            <select name="urgency">
+              <option>Low</option>
+              <option>Medium</option>
+              <option>High</option>
+            </select>
+          </label>
         </div>
-      </footer>
+
+        <label>
+          Description
+          <textarea name="description" rows="4"></textarea>
+        </label>
+
+        <div class="row">
+          <label>
+            Your Name <span class="req">*</span>
+            <input type="text" name="reporter" />
+            <div class="error" data-for="reporter"></div>
+          </label>
+
+          <label>
+            Email <span class="req">*</span>
+            <input type="email" name="email" />
+            <div class="error" data-for="email"></div>
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit Report</button>
+
+        <p id="success" class="success hidden">
+          ✅ Report submitted successfully!
+        </p>
+
+      </form>
+    </section>
+  </main>
+
+  <!-- ── FOOTER ── -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <p>© <span id="year"></span> Clean Co. Cleaner streets, greener future.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/storage.js"></script>
+  <script src="js/report.js"></script>
+
 </body>
 
 </html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Clean Co</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header class="site-header">
+        <nav class="nav container">
+            <a href="index.html" class="brand"><span class="logo">♻</span>Clean Co</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="report.html">Report</a></li>
+                <li><a href="reports.html">Reports</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--MAIN CONTENT-->
+    <main>
+        <section class="container section">
+
+            <div class="page-head-row">
+                <div>
+                    <h1>Community Reports</h1>
+                    <p>All reports are stored in your browser via localStorage.</p>
+                </div>
+                <a href="report.html" class="btn btn-primary">+ New Report</a>
+            </div>
+
+            <!--Filters-->
+            <div class="filters">
+                <input type="search" id="search" placeholder="Search by title, location, description..." />
+
+                <select id="filter">
+                    <option value="All">All</option>
+                    <option value="Plastic">Plastic</option>
+                    <option value="Organic">Organic</option>
+                    <option value="E-Waste">E-Waste</option>
+                    <option value="Hazardous">Hazardous</option>
+                    <option value="General">General</option>
+                </select>
+            </div>
+
+            <!-- Reports list -->
+            <div id="reports-list" class="cards-2"></div>
+
+            <!-- Empty state -->
+            <div id="empty" class="empty hidden">
+                No reports match.
+                <a href="report.html">Create the first one →</a>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- ── FOOTER ── -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <p>© <span id="year"></span> GreenCycle.</p>
+            <p>Built for the FSD-FT01 Final Project.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/storage.js"></script>
+    <script src="js/reports.js"></script>
+
+    <!-- Footer year script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const y = document.getElementById("year");
+            if (y) y.textContent = new Date().getFullYear();
+        });
+    </script>
+
+</body>
+
+</html>

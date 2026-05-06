@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  <!-- ── NAVIGATION ── -->
+  <!-- NAVIGATION -->
   <header class="site-header">
     <nav class="nav container">
       <a href="index.html" class="brand">
@@ -17,23 +17,26 @@
       </a>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
         <li><a href="services.html">Services</a></li>
-        <li><a href="report.html" class="active">Report</a></li>
         <li><a href="reports.html">Reports</a></li>
+        <li><a href="report.html" class="active">Report</a></li>
+        <li><a href="about.html">About</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- ── MAIN ── -->
+  <!-- MAIN -->
   <main>
     <section class="container section narrow">
       <header class="page-head">
-        <h1>Spot a Mess? Sema Hapa!</h1>
+        <h1>Let’s Fix Things Together</h1>
         <p>
-          Takes about 30 seconds—promise. Don’t overthink it. Whether it’s a burst bin at Ngong Market, plastics on
-          Kiserian road, or something just making the place look “ugh,” let us know and we’ll jump in. <br>
-          <strong>Your report stays on your browser (hakuna stress).</strong>
+          Noticed something that needs sorting out here in Ngong? A full bin, rubbish in the street, or anything else
+          you think should be cleaned or fixed—just let us know. Write it out however you like; we’re not looking for
+          perfect answers. Even a quick heads-up is a big help.
+          <br>
+          <span style="color:#388e3c;">You can use your real name, a nickname, or just leave it blank if you
+            want.</span>
         </p>
       </header>
 
@@ -41,73 +44,76 @@
       <form id="report-form" class="form" novalidate>
 
         <label>
-          What’s the mess? <span class="req">*</span>
-          <input type="text" name="title" placeholder="e.g. Overflowing bin near Mama Maggie's shop" />
+          What did you see? <span class="req">*</span>
+          <input type="text" name="title"
+            placeholder="e.g. Overflowing bin by the market, broken glass on the path, rubbish piling up…" />
           <div class="error" data-for="title"></div>
         </label>
 
         <div class="row">
           <label>
             Where is it? <span class="req">*</span>
-            <input type="text" name="location" placeholder="E.g. Saitoti road, next to the butchery…" />
+            <input type="text" name="location" placeholder="A rough location helps, but ‘not sure’ is okay too" />
             <div class="error" data-for="location"></div>
           </label>
 
           <label>
-            What kind of stuff?
+            What sort of mess?
             <select name="category">
               <option>General</option>
               <option>Plastic</option>
               <option>Organic</option>
               <option>E-Waste</option>
               <option>Hazardous</option>
+              <option>Not sure</option>
             </select>
           </label>
         </div>
 
         <div class="row">
           <label>
-            How urgent?
+            Is it urgent?
             <select name="urgency">
               <option>Low</option>
               <option selected>Medium</option>
               <option>High</option>
+              <option>Not sure</option>
             </select>
           </label>
 
           <label>
-            Your name (or nickname) <span class="req">*</span>
-            <input type="text" name="reporter" placeholder="e.g. Shiko, Brian, Mama Njeri…" />
+            Name or nickname <span class="req">*</span>
+            <input type="text" name="reporter" placeholder="Whatever you’d like, or leave blank" />
             <div class="error" data-for="reporter"></div>
           </label>
         </div>
 
         <label>
-          Email (won’t be shared) <span class="req">*</span>
-          <input type="email" name="email" placeholder="you@example.com" />
+          Email (we’ll only use this if we need to follow up) <span class="req">*</span>
+          <input type="email" name="email" placeholder="you@email.com" />
           <div class="error" data-for="email"></div>
         </label>
 
         <label>
-          Add a few details
+          Anything else you want to add? (optional)
           <textarea name="description" rows="4"
-            placeholder="Anything funny happen? Does it smell, is it blocking the road? The more you say, the easier to sort!"></textarea>
+            placeholder="Extra details, a quick note, or just leave this empty if you want."></textarea>
         </label>
 
-        <button type="submit" class="btn btn-primary">Submit (Twende!)</button>
+        <button type="submit" class="btn btn-primary">Send</button>
 
         <p id="success" class="success hidden">
-          ✓ Sorted! Redirecting to our reports… grab a chai while you wait!
+          Thanks for letting us know. We’ll get on it soon.<br>
+          <small>Every small report helps keep Ngong clean for everyone.</small>
         </p>
-
       </form>
     </section>
   </main>
-
-  <!-- ── FOOTER ── -->
+  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container footer-grid">
-      <p>© <span id="year"></span> Clean Co Ngong. Asante for looking out for our town. Tukutane next clean-up!</p>
+      <p>© <span id="year"></span> Clean Co Ngong. We really appreciate you looking out for our shared spaces. If you’re
+        ever not sure what to write, just say what you saw. That’s enough.</p>
     </div>
   </footer>
 
@@ -115,7 +121,6 @@
   <script src="js/storage.js"></script>
   <script src="js/report.js"></script>
 
-  <!-- footer year -->
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       const y = document.getElementById("year");

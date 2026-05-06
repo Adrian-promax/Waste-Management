@@ -17,10 +17,10 @@
             </a>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
                 <li><a href="services.html" class="active">Services</a></li>
-                <li><a href="report.html">Report</a></li>
                 <li><a href="reports.html">Reports</a></li>
+                <li><a href="report.html">Report</a></li>
+                <li><a href="about.html">About</a></li>
             </ul>
         </nav>
     </header>
@@ -90,13 +90,11 @@
         </div>
     </footer>
 
-    <script src="js/storage.js"></script>
-    <script src="js/services.js"></script>
     <script>
-        // Sets the year
-        document.getElementById('year').textContent = new Date().getFullYear();
+        // Set the year in the footer (no drama)
+        const y = document.getElementById('year');
+        if (y) y.textContent = new Date().getFullYear();
     </script>
-
 </body>
 
 </html>

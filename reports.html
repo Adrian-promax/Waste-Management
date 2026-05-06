@@ -2,40 +2,43 @@
 <html lang="en">
 
 <head>
-    <title>Clean Co</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Community Reports — Clean Co</title>
     <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+    <!-- ── NAVIGATION ── -->
     <header class="site-header">
         <nav class="nav container">
-            <a href="index.html" class="brand"><span class="logo">♻</span>Clean Co</a>
+            <a href="index.html" class="brand">
+                <span class="logo">♻</span> Clean Co
+            </a>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="report.html">Report</a></li>
-                <li><a href="reports.html">Reports</a></li>
+                <li><a href="reports.html" class="active">Reports</a></li>
             </ul>
         </nav>
     </header>
 
-    <!--MAIN CONTENT-->
+    <!-- ── MAIN ── -->
     <main>
         <section class="container section">
-
             <div class="page-head-row">
                 <div>
                     <h1>Community Reports</h1>
-                    <p>All reports are stored in your browser via localStorage.</p>
+                    <p>Everything below is saved locally in your browser (localStorage).</p>
                 </div>
                 <a href="report.html" class="btn btn-primary">+ New Report</a>
             </div>
 
-            <!--Filters-->
+            <!-- Filters -->
             <div class="filters">
-                <input type="search" id="search" placeholder="Search by title, location, description..." />
-
+                <input id="search" type="search" placeholder="Search title, location, description…" />
                 <select id="filter">
                     <option value="All">All</option>
                     <option value="Plastic">Plastic</option>
@@ -46,23 +49,21 @@
                 </select>
             </div>
 
-            <!-- Reports list -->
+            <!-- Reports -->
             <div id="reports-list" class="cards-2"></div>
 
             <!-- Empty state -->
             <div id="empty" class="empty hidden">
-                No reports match.
-                <a href="report.html">Create the first one →</a>
+                Nothing matches that.
+                <a href="report.html">Be the first to report something →</a>
             </div>
-
         </section>
     </main>
 
     <!-- ── FOOTER ── -->
     <footer class="site-footer">
         <div class="container footer-grid">
-            <p>© <span id="year"></span> GreenCycle.</p>
-            <p>Built for the FSD-FT01 Final Project.</p>
+            <p>© <span id="year"></span> Clean Co. Cleaner streets, greener future.</p>
         </div>
     </footer>
 
@@ -70,14 +71,13 @@
     <script src="js/storage.js"></script>
     <script src="js/reports.js"></script>
 
-    <!-- Footer year script -->
+    <!-- Footer year -->
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const y = document.getElementById("year");
             if (y) y.textContent = new Date().getFullYear();
         });
     </script>
-
 </body>
 
 </html>

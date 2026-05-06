@@ -1,58 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <title>Clean Co</title>
-    <link rel="stylesheet" href="style.css" />
+  <title>Clean Co Ngong</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
   <header class="site-header">
-  <!-- ── NAVIGATION ── -->
-  <nav class="nav container">
-    <a href="index.html" class="brand"><span class="logo">♻</span>Clean Co</a>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="report.html">Report</a></li>
-      <li><a href="reports.html">Reports</a></li>
-    </ul>
-  </nav>
+    <nav class="nav container">
+      <a href="index.html" class="brand"><span class="logo">♻</span>Clean Co Ngong</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="report.html">Report</a></li>
+        <li><a href="reports.html">Reports</a></li>
+      </ul>
+    </nav>
   </header>
 
+  <main>
+    <!-- Hero -->
     <section class="hero">
       <div class="container hero-grid">
         <div>
-          <h1>Cleaner streets,<br/><span class="gradient-text">greener future.</span></h1>
-          <p class="lead">Turning environmental changes into sustainable solutions.</p>
-          <div class="actions">
-            <a href="report.html" class="btn btn-primary">Report an Issue</a>
+          <span class="pill">Neighbors helping neighbors in Ngong</span>
+          <h1>
+            Karibu Ngong! Let’s keep our town clean<br />
+            and let <span class="gradient-text">Ngong Hills shine.</span>
+          </h1>
+          <p class="lead">
+            Ever walk past a pile of rubbish near Ngong Market or along the road to Kiserian and think, “Someone should
+            take care of this?” Now you actually can! Snap a photo, tell us where you saw it—even if it’s up on Kona
+            Baridi or outside your apartment in Ngong town—and we’ll help get it sorted.
+            <br><br>
+            Just last weekend, a few of us met up after church and picked up plastic bottles around Ngong Matatu stage.
+            Big up to Wanjiku for bringing extra gloves, and to Brian for keeping us laughing—cleaning up was way more
+            fun together!
+            <br><br>
+            As Uncle Otieno always says, “Tuwe pamoja, tusafishe Ngong.” So don’t wait—report any mess, big or small.
+            Every little bit helps make Ngong a better place for everyone!
+          </p>
+          <div class="cta-row">
+            <a href="report.html" class="btn btn-primary">Report a Mess</a>
+            <a href="reports.html" class="btn btn-ghost">See Community Updates</a>
           </div>
         </div>
+        <!-- Stats -->
         <div class="stats">
-          <div class="stat-card"><div class="stat-value" id="stat-total">0</div><div class="stat-label">Total Reports</div></div>
-          <div class="stat-card"><div class="stat-value" id="stat-high">0</div><div class="stat-label">High Urgency</div></div>
-          <div class="stat-card"><div class="stat-value" id="stat-recycled">0</div><div class="stat-label">Recyclable</div></div>
+          <div class="stat-card">
+            <div class="stat-num" id="stat-total">0</div>
+            <div class="stat-lbl">Reports from Ngong Residents</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num" id="stat-high">0</div>
+            <div class="stat-lbl">Needs Quick Action</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num" id="stat-recycled">0</div>
+            <div class="stat-lbl">Ready to Recycle</div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="container section">
-      <h2 class="section-title">How Clean Co works</h2>
-      <p class="section-sub">Three simple steps to a cleaner community.</p>
-      <div class="cards">
-        <article class="card"><div class="icon">📝</div><h3>1. Report</h3><p>Submit a waste issue with location, category, and urgency.</p></article>
-        <article class="card"><div class="icon">🚚</div><h3>2. Track</h3><p>View all community reports and monitor pickup status.</p></article>
-        <article class="card"><div class="icon">♻️</div><h3>3. Recycle</h3><p>Learn the right way to sort, reuse, and reduce waste.</p></article>
+    <!-- Community Stories Section -->
+    <section class="community-stories">
+      <div class="container">
+        <h2>Recent Good Deeds in Ngong</h2>
+        <ul>
+          <li>
+            <strong>Wanjiku & Brian</strong> cleared plastic bottles at the Ngong Matatu stage—mko juu sana!
+          </li>
+          <li>
+            <strong>Uncle Otieno</strong> organized a Saturday clean-up at Kona Baridi. That place looks fresh now!
+          </li>
+          <li>
+            <strong>The students from Ngong Township Primary</strong> planted flowers where rubbish used to pile up. Now
+            it’s a perfect spot for selfies!
+          </li>
+        </ul>
+        <p>Got a clean-up story or want to shout out your crew? <a href="report.html">Share it here!</a> We love
+          celebrating Ngong’s best helpers.</p>
       </div>
     </section>
+  </main>
 
-    <!--footer-->
   <footer class="site-footer">
     <div class="container footer-grid">
-      <p>© <span id="year"></span> Clean Co. Cleaner streets, greener future.</p>
+      <p>© <span id="year"></span> Clean Co Ngong. Thanks for being part of the Ngong spirit! Tuko pamoja—let’s keep our
+        home clean and green.</p>
     </div>
   </footer>
 
-  <script src="code.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/home.js"></script>
+  <script>
+    // Automatically sets the year in the footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
+
 </html>

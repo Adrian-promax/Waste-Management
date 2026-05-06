@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Services</title>
+    <title>Clean Co Ngong</title>
     <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -10,7 +10,7 @@
     <header class="site-header">
         <!-- ── NAVIGATION ── -->
         <nav class="nav container">
-            <a href="index.html" class="brand"><span class="logo">♻</span>Clean Co</a>
+            <a href="index.html" class="brand"><span class="logo">♻</span>Clean Co Ngong</a>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -20,28 +20,53 @@
             </ul>
         </nav>
     </header>
-        <main>
-            <section class="container section narrow">
-                <h1>About Clean Co</h1>
-                <p>Our website provides a platform to empower the community 
-                   to act on local environment by teaching them how to recycle and
-                   construct cleaner neighborhoods.
-                </p>
-                <article class="card">
-                <h2>Our Misson</h2>
-                <p>Minimize trash so that recycling is promoted and the community is made responsible</p>
-           </article>
-           <article class="card">
-            <div></div>
-           </article>
-         </section>
-        </main>
+    <main>
+        <section class="container section narrow">
+            <h1>About Clean Co Ngong</h1>
+            <p class="lead">
+                Sasa! Ever walked past that overflowing bin at Ngong Market and just thought, “Aii, surely by now
+                someone should have cleared this?” Adrian did—and that’s how Clean Co Ngong was born. It started with
+                one guy and a big idea: what if reporting trash in our mtaa was as easy as taking a selfie?
+            </p>
 
-        <!--footer-->
-        <footer class="site-footer">
-            <div class="container footer-grid">
-                <p>© <span id="year"></span> Clean Co. Cleaner streets, greener future.</p>
-            </div>
-        </footer>
-    </body>
+            <h2>Why we do this</h2>
+            <p>
+                We love Ngong, simple as that. We want our home to be as fresh as the sunrise over Ngong Hills. But
+                sometimes, after a busy market day or a downpour, rubbish piles up—plastic bottles, blue paper bags,
+                maize husks—making the place look a bit less like home.<br>
+                Adrian and a few friends thought, “Why not make it super easy for everyone to call out these messes?” No
+                long forms. No accounts. No stress. Just see, snap, and share—then we all pitch in!
+            </p>
+
+            <h2>Who’s behind Clean Co Ngong?</h2>
+            <p>
+                Meet <strong>Adrian</strong>—the founder, the guy who won’t stop talking about a cleaner Ngong. One day,
+                after stepping over the same pile of trash by Saitoti road for the third time that week, he finally
+                said, “Basi, enough! Let’s do something about this.”<br><br>
+                Adrian, plus friends like Wanjiku (the one always laughing at matatu stories), Kevin (never short on
+                jokes), and Mama Faith (her chai is still legendary), decided to get everyone involved. Now, you’ll find
+                them at Saturday clean-ups, debating who makes the softest chapati, or planning the next big
+                #UsafiNiWetu moment.<br><br>
+                We believe every small effort counts. Kama kawaida, tuko pamoja!
+            </p>
+
+            <a href="report.html" class="btn btn-primary">Spot a mess? Report hapa!</a>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <p>© <span id="year"></span> Clean Co Ngong. Asante for caring, neighbor! Let’s keep Ngong as fresh as those
+                early morning hill breezes. #UsafiNiWetu</p>
+        </div>
+    </footer>
+
+    <script src="js/storage.js"></script>
+    <script src="js/nav.js"></script>
+    <script>
+        // Fill the year automatically
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+
 </html>

@@ -4,19 +4,17 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Services</title>
+    <title>Services | Clean Co Ngong</title>
     <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-
-    <!-- ── NAVIGATION ── -->
+    <!-- NAVIGATION -->
     <header class="site-header">
         <nav class="nav container">
             <a href="index.html" class="brand">
-                <span class="logo">♻</span> Clean Co
+                <span class="logo">♻</span> Clean Co Ngong
             </a>
-
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -27,66 +25,77 @@
         </nav>
     </header>
 
-    <!-- ── MAIN CONTENT ── -->
     <main>
         <section class="container section">
-            <h2 class="section-title">How Clean Co Works</h2>
+            <h2 class="section-title">Sasa, Hii Ndio Tunafanya (Seriously, This Is It)</h2>
             <p class="section-sub">
-                Three simple steps to a cleaner community.
+                People always ask, "So you guys just collect trash?" Eish, if only it was that simple. Here’s what
+                really goes on around here, no filters.
             </p>
 
-            <div class="cards">
+            <ul style="margin-bottom: 2em; line-height: 1.7;">
+                <li>
+                    <strong>Bin Pickup</strong><br>
+                    You know that bin by Ngong Market? Ebu, if it’s full just tell us. We don’t always get there on time
+                    (traffic, si unajua), but we try. Last time, Kevin dropped his glove in the trash. He still
+                    complains. 😂
+                </li>
+                <li>
+                    <strong>Recycling (Sorta)</strong><br>
+                    If it looks like it can be used again, we try – bottles, plastic, old buckets. Last time, someone
+                    brought a broken jiko. We laughed, but now it’s a flower pot. Anything goes.
+                </li>
+                <li>
+                    <strong>Clinic Stuff</strong><br>
+                    Hospitals and chemists, please, just call us. Don’t throw those things in the river, bana! Mama
+                    Njeri always gives us mandazi after we collect. Sometimes she gives two if we complain enough.
+                </li>
+                <li>
+                    <strong>Compost</strong><br>
+                    Banana peels, ugali, cabbage leaves… we dump them behind the church and after a while, magic. Brian
+                    swears that's why his sukuma is big. Could be.
+                </li>
+                <li>
+                    <strong>Old Electronics</strong><br>
+                    That kabambe from 2003? We’ll take it. Don’t ask what we do with them, but at least it’s not in the
+                    river.
+                </li>
+                <li>
+                    <strong>Street Cleaning</strong><br>
+                    We sweep, unblock drains (si it’s hard!), and sometimes just laugh at how much mud comes out. If you
+                    see us struggling, shout “pole!” or bring chai.
+                </li>
+            </ul>
 
-                <article class="card">
-                    <div class="icon">🗑️</div>
-                    <h3>1. General Waste Collection</h3>
-                    <p>Regular collection of household, commercial, and industrial waste.</p>
-                </article>
+            <p>
+                If you want something else cleaned, or you just want to gossip, <a href="report.html">shout
+                    here</a>.<br>
+                Sometimes we’re late, sometimes we get it wrong, but we always try. Usafi ni yetu sote, si ya serikali
+                tu!
+            </p>
 
-                <article class="card">
-                    <div class="icon">♻️</div>
-                    <h3>2. Recycling</h3>
-                    <p>We sort, process, and transform waste into reusable materials.</p>
-                </article>
-
-                <article class="card">
-                    <div class="icon">🏥</div>
-                    <h3>3. Hospital Waste Disposal</h3>
-                    <p>Collection and safe destruction of medical waste to prevent infections.</p>
-                </article>
-
-                <article class="card">
-                    <div class="icon">🌱</div>
-                    <h3>4. Organic Composting</h3>
-                    <p>Food and garden waste converted into compost and biogas.</p>
-                </article>
-
-                <article class="card">
-                    <div class="icon">💻</div>
-                    <h3>5. E-Waste Disposal</h3>
-                    <p>Safe handling and recycling of electronics, recovering materials like copper.</p>
-                </article>
-
-                <article class="card">
-                    <div class="icon">🧴</div>
-                    <h3>6. Sanitation Services</h3>
-                    <p>Street sweeping, drain cleaning, and sewer maintenance.</p>
-                </article>
-
-            </div>
+            <blockquote style="margin:2em 0;color:#388e3c;border-left:4px solid #76b947;padding-left:1em;">
+                “Ati last time we cleaned, that goat from the stage just sat and watched. Even goats want a clean
+                town.”<br>
+                <em>— Adrian, founder (sometimes seen with a broom, sometimes with chapati)</em>
+            </blockquote>
         </section>
     </main>
 
-    <!-- ── FOOTER ── -->
+    <!-- FOOTER -->
     <footer class="site-footer">
         <div class="container footer-grid">
-            <p>© <span id="year"></span> Clean Co. Cleaner streets, greener future.</p>
+            <p>© <span id="year"></span> Clean Co Ngong. If you read this far, you deserve a soda. Let’s keep Ngong
+                looking fresh!</p>
         </div>
     </footer>
 
-    <!-- Scripts -->
     <script src="js/storage.js"></script>
     <script src="js/services.js"></script>
+    <script>
+        // Sets the year
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 
 </body>
 

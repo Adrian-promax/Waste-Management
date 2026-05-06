@@ -1,75 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <title>Report</title>
-    <link rel="stylesheet" href="style.css" />
+  <title>Report</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-  <header>
-  <!-- ── NAVIGATION ── -->
-    <nav aria-label="Main navigation">
+  <header class="site-header"> 
+    <!-- ── NAVIGATION ── -->
+    <nav class="nav container">
       <a href="index.html" class="brand"><span class="logo">♻</span>Clean Co</a>
-        <ul class="nav-links">
-         <li><a href="index.html">Home</a></li>
-         <li><a href="about.html">About</a></li>
-         <li><a href="services.html">Services</a></li>
-         <li><a href="report.html">Report</a></li>
-        </ul>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="report.html">Report</a></li>
+      </ul>
     </nav>
   </header>
-       <section class="container section narrow">
-      <h1>Report a Waste Issue</h1>
-      
-        <form id="report-form" class="form" novalidate>
-        <label>Title <span class="req"></span>
-          <input type="text" name="title" placeholder="" minlength="3" />
-          <small class="error" data-for="title"></small>
+  <section class="container section narrow">
+    <h1>Report a Waste Issue</h1>
+
+    <form id="report-form" class="form" novalidate>
+      <label>Title <span class="req"></span>
+        <input type="text" name="title" placeholder="" minlength="3" />
+        <small class="error" data-for="title"></small>
+      </label>
+
+      <label>Location <span class="req"></span>
+        <input type="text" name="location" required />
+        <small class="error" data-for="location"></small>
+      </label>
+
+      <div class="row">
+        <label>Category
+          <select name="category">
+            <option>General</option>
+            <option>Plastic</option>
+            <option>Organic</option>
+            <option>E-Waste</option>
+            <option>Hazardous</option>
+          </select>
         </label>
-
-        <label>Location <span class="req"></span>
-          <input type="text" name="location" required />
-          <small class="error" data-for="location"></small>
+        <label>Urgency
+          <select name="urgency">
+            <option>Low</option>
+            <option selected>Medium</option>
+            <option>High</option>
+          </select>
         </label>
+      </div>
 
-        <div class="row">
-          <label>Category
-            <select name="category">
-              <option>General</option><option>Plastic</option><option>Organic</option>
-              <option>E-Waste</option><option>Hazardous</option>
-            </select>
-          </label>
-          <label>Urgency
-            <select name="urgency">
-              <option>Low</option><option selected>Medium</option><option>High</option>
-            </select>
-          </label>
-        </div>
+      <label>Description
+        <textarea name="description" rows="4"></textarea>
+      </label>
 
-        <label>Description
-          <textarea name="description" rows="4"></textarea>
+      <div class="row">
+        <label>Your Name <span class="req"></span>
+          <input type="text" name="reporter" required />
+          <small class="error" data-for="reporter"></small>
         </label>
+        <label>Email 📧 <span class="req"></span>
+          <input type="email" name="email" required />
+          <small class="error" data-for="email"></small>
+        </label>
+      </div>
 
-        <div class="row">
-          <label>Your Name <span class="req"></span>
-            <input type="text" name="reporter" required />
-            <small class="error" data-for="reporter"></small>
-          </label>
-          <label>Email 📧 <span class="req"></span>
-            <input type="email" name="email" required />
-            <small class="error" data-for="email"></small>
-          </label>
-        </div>
-
-        <button type="submit" class="btn btn-primary">Submit Report</button>
-        <p id="success" class="success hidden">✅ Report submitted! Redirecting…</p>
-      </form>
+      <button type="submit" class="btn btn-primary">Submit Report</button>
+      <p id="success" class="success hidden">✅ Report submitted! Redirecting…</p>
+    </form>
 
       <!--footer-->
-    <footer class="site-footer">
+      <footer class="site-footer">
         <div class="container footer-grid">
-            <p>© <span id="year"></span> Clean Co. Cleaner streets, greener future.</p>
+          <p>© <span id="year"></span> Clean Co. Cleaner streets, greener future.</p>
         </div>
-    </footer>
-
+      </footer>
 </body>
+
 </html>

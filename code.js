@@ -1,17 +1,14 @@
 // home page
 document.addEventListener("DOMContentLoaded", () => {
   const reports = getReports();
-
   const totalEl = document.getElementById("stat-total");
   const highEl = document.getElementById("stat-high");
   const recycledEl = document.getElementById("stat-recycled");
 
   if (totalEl) totalEl.textContent = reports.length;
-
   if (highEl) {
     highEl.textContent = reports.filter((r) => r.urgency === "High").length;
   }
-
   if (recycledEl) {
     recycledEl.textContent = reports.filter(
       (r) => r.category !== "General",

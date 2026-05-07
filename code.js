@@ -136,3 +136,9 @@ document.addEventListener("DOMContentLoaded", () => {
         r.category !== "General",
     ).length;
 });
+
+//listen for reports and say asante
+document.addEventListener("report:added", function (e) {
+  alert("Asante kwa kuchangia usafi Ngong! 🎉 Ripoti yako imeongezwa.");
+  // You can do even more here if you want (like update UI live)
+});

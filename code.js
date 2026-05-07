@@ -1,4 +1,4 @@
-const STORAGE_KEY = "greencycle.reports.v1";
+const STORAGE_KEY = "cleanco.reports.v1";
 
 // Get all reports. If none, start with two stories to get things going.
 function getReports() {
